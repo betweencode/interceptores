@@ -1,0 +1,10 @@
+
+{
+    "/entrada": {
+      "target": "https://swapi.dev",
+      "secure": false,
+      "pathRewrite": {
+        "^/entrada": ""
+      }
+    }
+  }
