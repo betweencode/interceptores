@@ -8,11 +8,12 @@ import { MiservicioService } from '../services/miservicio.service';
 })
 export class Componentes1Component implements OnInit {
 
-  public obj1:any = {};
+  
 
   constructor() { }
 
   ngOnInit(): void {  
+   
   }
 
 }

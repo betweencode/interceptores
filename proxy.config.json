@@ -1,7 +1,7 @@
 
 {
     "/entrada": {
-      "target": "https://swapi.dev",
+      "target": "http://list.ly",
       "secure": false,
       "pathRewrite": {
         "^/entrada": ""
