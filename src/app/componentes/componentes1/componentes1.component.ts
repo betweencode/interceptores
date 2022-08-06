@@ -10,13 +10,9 @@ export class Componentes1Component implements OnInit {
 
   public obj1:any = {};
 
-  constructor(private miServicesPrd:MiservicioService) { }
+  constructor() { }
 
   ngOnInit(): void {  
-    this.miServicesPrd.getLista().subscribe((datos:any) =>{
-      this.obj1 = datos.list;
-      console.log(this.obj1);
-    });
   }
 
 }

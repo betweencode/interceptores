@@ -12,18 +12,12 @@ export class MiservicioService{
   public getLista():Observable<any>{
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type':  'application/json'
+        'Content-Type':  'application/json',
+        'personalizado':'siseñol'
       })
     };
-      return this.http.get("http://list.ly/api/v4/lists/1");
+      return this.http.get("https://swapi.dev/api/people/1/",httpOptions);
   }
 
-  public getLista2():Observable<any>{
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json'
-      })
-    };
-      return this.http.get("http://list.ly/api/v4/lists/1");
-  }
+
 }
