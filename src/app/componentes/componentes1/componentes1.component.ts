@@ -8,11 +8,14 @@ import { MiservicioService } from '../services/miservicio.service';
 })
 export class Componentes1Component implements OnInit {
 
-  
+  public miobj:any = {};
 
-  constructor() { }
+  constructor(private miservicioPrd:MiservicioService) { }
 
   ngOnInit(): void {  
+    this.miservicioPrd.getLista().subscribe(datos =>{
+        this.miobj = datos;
+    });
    
   }
 

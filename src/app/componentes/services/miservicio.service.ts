@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,15 @@ export class MiservicioService {
   constructor(private http:HttpClient) { }
 
   public getLista():Observable<any>{
-      return this.http.get("http://list.ly/api/v4/lists/1");
+      const httpoption = {
+        headers: new HttpHeaders({
+          'Content-Type':"application/json",
+          'personalizado':'valorx',
+          'auth':'token'
+        })
+      }
+      return this.http.get("http://list.ly/api/v4/lists/1",httpoption).pipe(map((s:any)=>s.list));
   }
+
+  
 }
