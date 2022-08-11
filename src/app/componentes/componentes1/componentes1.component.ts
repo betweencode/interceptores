@@ -14,20 +14,10 @@ export class Componentes1Component implements OnInit {
   constructor(private miservicioPrd:MiservicioService) { }
 
   ngOnInit(): void {  
-    this.miservicioPrd.getLista().subscribe(datos =>{
-      this.miobj = datos;
-  });
+   
     this.miservicioPrd.getLista1().subscribe(datos =>{
         this.miobj = datos;
     });
-
-    this.miservicioPrd.getLista2().subscribe(datos =>{
-      this.miobj = datos;
-  });
-
-  this.miservicioPrd.getLista3().subscribe(datos =>{
-    this.miobj = datos;
-});
 
    
   }
