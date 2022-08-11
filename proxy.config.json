@@ -1,10 +1,11 @@
 
 {
-    "/entrada": {
+    "/entrada/*": {
       "target": "http://list.ly",
       "secure": false,
       "pathRewrite": {
         "^/entrada": ""
-      }
+      },
+      "changeOrigin": true
     }
   }

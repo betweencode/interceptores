@@ -9,13 +9,26 @@ import { MiservicioService } from '../services/miservicio.service';
 export class Componentes1Component implements OnInit {
 
   public miobj:any = {};
+  public editar:boolean = false;
 
   constructor(private miservicioPrd:MiservicioService) { }
 
   ngOnInit(): void {  
     this.miservicioPrd.getLista().subscribe(datos =>{
+      this.miobj = datos;
+  });
+    this.miservicioPrd.getLista1().subscribe(datos =>{
         this.miobj = datos;
     });
+
+    this.miservicioPrd.getLista2().subscribe(datos =>{
+      this.miobj = datos;
+  });
+
+  this.miservicioPrd.getLista3().subscribe(datos =>{
+    this.miobj = datos;
+});
+
    
   }
 

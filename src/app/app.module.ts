@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Componentes1Component } from './componentes/componentes1/componentes1.component';
+import { MiinterceptorService } from './componentes/services/miinterceptor.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { Componentes1Component } from './componentes/componentes1/componentes1.c
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:MiinterceptorService,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
